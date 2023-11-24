@@ -3,9 +3,7 @@ package com.example.kotlin.covid19app.data.network
 import com.example.kotlin.covid19app.data.network.model.CountryObject
 import retrofit2.http.GET
 import retrofit2.http.Header
-import retrofit2.http.Path
 import retrofit2.http.Query
-import java.util.Date
 
 interface CovidAPIService {
 

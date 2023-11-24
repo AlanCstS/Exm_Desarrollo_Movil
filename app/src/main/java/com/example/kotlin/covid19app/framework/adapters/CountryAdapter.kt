@@ -12,7 +12,7 @@ import com.example.kotlin.covid19app.framework.adapters.viewholders.CountryViewH
 class CountryAdapter: RecyclerView.Adapter<CountryViewHolder>() {
 
     var data: ArrayList<Country> = ArrayList()
-    lateinit var context: Context
+    private lateinit var context: Context
 
     @SuppressLint("NotConstructor")
     fun CountryAdapter(basicData: ArrayList<Country>, context:Context) {

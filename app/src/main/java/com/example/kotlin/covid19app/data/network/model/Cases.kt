@@ -1,3 +1,6 @@
 package com.example.kotlin.covid19app.data.network.model
 
-class CountryObject : ArrayList<Country>()
+data class Cases(
+    val new: Int,
+    val total: Int
+)

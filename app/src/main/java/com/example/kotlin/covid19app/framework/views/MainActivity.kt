@@ -30,7 +30,7 @@ class MainActivity: AppCompatActivity() {
 
     private fun initializeObservers(){
         viewModel.countryObjectLiveData.observe(this) { countryObject ->
-            setUpRecyclerView(countryObject.results)
+            setUpRecyclerView(countryObject)
         }
     }
 
