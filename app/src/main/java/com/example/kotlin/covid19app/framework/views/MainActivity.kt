@@ -9,7 +9,7 @@ import com.example.kotlin.covid19app.databinding.ActivityMainBinding
 import com.example.kotlin.covid19app.framework.adapters.CountryAdapter
 import com.example.kotlin.covid19app.framework.viewmodels.MainViewModel
 
-class MainActivity: AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private val adapter: CountryAdapter = CountryAdapter()
@@ -28,14 +28,14 @@ class MainActivity: AppCompatActivity() {
         setContentView(binding.root)
     }
 
-    private fun initializeObservers(){
+    private fun initializeObservers() {
         viewModel.countryObjectLiveData.observe(this) { countryObject ->
             setUpRecyclerView(countryObject)
         }
     }
 
     // TODO: Convertir a grid
-    private fun setUpRecyclerView(dataForList:ArrayList<Country>){
+    private fun setUpRecyclerView(dataForList: ArrayList<Country>) {
         binding.RVCovid.setHasFixedSize(true)
         val linearLayoutManager = LinearLayoutManager(
             this,

@@ -11,14 +11,15 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class MainViewModel: ViewModel() {
+class MainViewModel : ViewModel() {
 
     val countryObjectLiveData = MutableLiveData<CountryObject>()
     private val countryListRequirement = CountryListRequirement()
 
-    fun getCountryList(){
+    fun getCountryList() {
         viewModelScope.launch(Dispatchers.IO) {
-            val result: CountryObject? = countryListRequirement(Constants.API_DATE, Constants.API_KEY)
+            val result: CountryObject? =
+                countryListRequirement(Constants.API_DATE, Constants.API_KEY)
             Log.d("Salida", result?.count().toString())
             CoroutineScope(Dispatchers.Main).launch {
                 countryObjectLiveData.postValue(result!!)

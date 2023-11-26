@@ -8,7 +8,7 @@ class CountryListRequirement {
     private val repository = CountryRepository()
 
     suspend operator fun invoke(
-        date:String,
+        date: String,
         key: String
     ): CountryObject? = repository.getCountryList(date, key)
 
