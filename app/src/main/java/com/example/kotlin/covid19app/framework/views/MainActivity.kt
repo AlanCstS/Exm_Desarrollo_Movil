@@ -3,6 +3,7 @@ package com.example.kotlin.covid19app.framework.views
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.widget.addTextChangedListener
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.kotlin.covid19app.data.network.model.Country
 import com.example.kotlin.covid19app.databinding.ActivityMainBinding
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         initializeBinding()
         initializeObservers()
         viewModel.getCountryList()
+        initializeListeners()
     }
 
     private fun initializeBinding() {
@@ -46,4 +48,9 @@ class MainActivity : AppCompatActivity() {
         binding.RVCovid.adapter = adapter
     }
 
+    private fun initializeListeners() {
+        binding.ETFilter.addTextChangedListener {
+            viewModel.updateCountryList(it.toString())
+        }
+    }
 }
