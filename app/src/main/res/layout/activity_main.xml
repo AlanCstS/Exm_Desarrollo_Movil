@@ -7,16 +7,23 @@
         android:id="@+id/TVDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/accent"
         android:gravity="center"
-        android:text="@string/api_date" />
+        android:text="@string/api_date"
+        android:textColor="@color/white" />
 
     <TextView
         android:id="@+id/TVGlossary"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
         android:layout_below="@id/TVDate"
-        android:gravity="center"
-        android:text="Caso(s) Nuevos = CN \nCaso(s) Totales = CT" />
+        android:background="@color/accent"
+        android:gravity=""
+        android:text="Caso(s) Nuevos = CN \nCaso(s) Totales = CT"
+        android:textColor="@color/white" />
+
+
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RVCovid"
