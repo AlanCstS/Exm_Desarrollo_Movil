@@ -34,7 +34,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    // TODO: Convertir a grid
     private fun setUpRecyclerView(dataForList: ArrayList<Country>) {
         binding.RVCovid.setHasFixedSize(true)
         val linearLayoutManager = LinearLayoutManager(
