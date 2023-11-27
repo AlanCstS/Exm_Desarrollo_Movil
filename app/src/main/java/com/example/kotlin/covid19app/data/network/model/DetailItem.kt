@@ -1,5 +1,14 @@
 package com.example.kotlin.covid19app.data.network.model
 
+/**
+ * Modelo de datos que representa la información detallada de un país, incluyendo
+ * casos reportados en fechas específicas.
+ *
+ * @property cases Un mapa que asocia fechas (String) con objetos [Cases] que contienen
+ *                 información sobre nuevos casos y el total acumulado.
+ * @property country El nombre del país.
+ * @property region La región del país (puede ser una cadena vacía si no se aplica).
+ */
 data class DetailItem(
     val cases: Map<String, Cases>,
     val country: String,
