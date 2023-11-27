@@ -18,7 +18,6 @@
         android:layout_height="40dp"
         android:layout_below="@id/TVDate"
         android:background="@color/accent"
-        android:gravity=""
         android:text="Caso(s) Nuevos = CN \nCaso(s) Totales = CT"
         android:textColor="@color/white" />
 
@@ -33,7 +32,9 @@
         android:maxLines="1"
         android:singleLine="true"
         android:textColor="@color/white"
-        android:imeOptions="actionDone">
+        android:imeOptions="actionDone"
+        android:paddingHorizontal="30dp"
+        android:autofillHints="Mexico...">
 
     </EditText>
 
